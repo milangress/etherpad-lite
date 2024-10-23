@@ -16,6 +16,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    ports:
+      - "9001:9001"
     environment:
       - NODE_ENV=production
       - ADMIN_PASSWORD=${SERVICE_PASSWORD_APP}
