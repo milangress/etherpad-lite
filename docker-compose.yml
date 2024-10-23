@@ -41,6 +41,7 @@ services:
       - DISABLE_IP_LOGGING=${DISABLE_IP_LOGGING:-false}
       - SOFFICE=${SOFFICE:-null}
       - TRUST_PROXY=true
+      - LOAD_TEST=true
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9001"]
