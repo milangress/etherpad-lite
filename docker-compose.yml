@@ -8,7 +8,13 @@ services:
       - plugins:/opt/etherpad-lite/src/plugin_packages
       - etherpad-var:/opt/etherpad-lite/var
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:9001"]
+      interval: 5s
+      timeout: 20s
+      retries: 10
     environment:
       NODE_ENV: production
       ADMIN_PASSWORD: ${DOCKER_COMPOSE_APP_ADMIN_PASSWORD:-admin}
@@ -42,6 +48,11 @@ services:
     # Be careful when other postgres docker container are running on the same port
     # ports:
     #   - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${DOCKER_COMPOSE_POSTGRES_USER} -d $${DOCKER_COMPOSE_POSTGRES_DATABASE}"]
+      interval: 5s
+      timeout: 20s
+      retries: 10
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
