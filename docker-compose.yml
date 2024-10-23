@@ -20,10 +20,11 @@ services:
       DB_TYPE: "postgres"
       DB_USER: ${DOCKER_COMPOSE_POSTGRES_USER:-admin}
       # For now, the env var DEFAULT_PAD_TEXT cannot be unset or empty; it seems to be mandatory in the latest version of etherpad
-      DEFAULT_PAD_TEXT: ${DOCKER_COMPOSE_APP_DEFAULT_PAD_TEXT:- }
+      DEFAULT_PAD_TEXT: "Line 1\nLine 2"
       DISABLE_IP_LOGGING: ${DOCKER_COMPOSE_APP_DISABLE_IP_LOGGING:-false}
       SOFFICE: ${DOCKER_COMPOSE_APP_SOFFICE:-null}
       TRUST_PROXY: ${DOCKER_COMPOSE_APP_TRUST_PROXY:-true}
+      LOGLEVEL: DEBUG
     restart: always
     ports:
       - "${DOCKER_COMPOSE_APP_PORT_PUBLISHED:-9001}:${DOCKER_COMPOSE_APP_PORT_TARGET:-9001}"
