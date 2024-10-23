@@ -1,7 +1,9 @@
 services:
   app:
     user: "0:0"
-    image: etherpad/etherpad:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     tty: true
     stdin_open: true
     volumes:
