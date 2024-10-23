@@ -37,11 +37,12 @@ services:
       - DB_PORT=5432
       - DB_TYPE=postgres
       - DB_USER=admin
-      - DEFAULT_PAD_TEXT="Line1"
+      - DEFAULT_PAD_TEXT="Line1\nLine2"
       - DISABLE_IP_LOGGING=${DISABLE_IP_LOGGING:-false}
       - SOFFICE=${SOFFICE:-null}
       - TRUST_PROXY=true
       - LOAD_TEST=false
+      - SKIN_NAME=teapad
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9001"]
