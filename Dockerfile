@@ -113,6 +113,7 @@ USER etherpad
 WORKDIR "${EP_DIR}"
 
 # etherpads version feature requires this. Only copy what is really needed
+RUN ls -la
 # COPY --chown=etherpad:etherpad ./.git/HEA[D] ./.git/HEAD
 # COPY --chown=etherpad:etherpad ./.git/ref[s] ./.git/refs
 COPY --chown=etherpad:etherpad ${SETTINGS} ./settings.json
