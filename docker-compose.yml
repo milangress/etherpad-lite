@@ -5,6 +5,12 @@ services:
       context: .
       dockerfile: ./Dockerfile
       target: production
+      args:
+        ETHERPAD_PLUGINS: >-
+          ep_image_upload
+          ep_embedded_hyperlinks2
+          ep_headings2
+          ep_align
     tty: true
     stdin_open: true
     volumes:
