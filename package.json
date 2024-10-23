@@ -31,7 +31,8 @@
     "list-plugins": "pnpm --filter bin run list-plugins",
     "build:etherpad": "pnpm --filter admin run build-copy && pnpm --filter ui run build-copy",
     "build:ui": "pnpm --filter ui run build-copy && pnpm --filter admin run build-copy",
-    "makeDocs": "pnpm --filter bin run makeDocs"
+    "makeDocs": "pnpm --filter bin run makeDocs",
+    "loadtest": "etherpad-loadtest http://pad.milan.place/p/test -l 200 -a 150"
   },
   "dependencies": {
     "ep_etherpad-lite": "workspace:./src"
@@ -39,6 +40,7 @@
   "devDependencies": {
     "admin": "workspace:./admin",
     "docs": "workspace:./doc",
+    "etherpad-load-test": "^1.0.10",
     "ui": "workspace:./ui"
   },
   "engines": {
@@ -51,5 +53,8 @@
     "url": "https://github.com/ether/etherpad-lite.git"
   },
   "version": "2.2.5",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "volta": {
+    "node": "20.18.0"
+  }
 }

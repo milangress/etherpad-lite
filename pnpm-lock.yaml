@@ -18,6 +18,9 @@ importers:
       docs:
         specifier: workspace:./doc
         version: link:doc
+      etherpad-load-test:
+        specifier: ^1.0.10
+        version: 1.0.10(ep_etherpad-lite@src)
       ui:
         specifier: workspace:./ui
         version: link:ui
@@ -2146,6 +2149,11 @@ packages:
   argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
 
+  argv@0.0.3:
+    resolution: {integrity: sha512-T/78+mAFUtUoCCdEiXzMwumwX490tUCQwMiKrr2DVEM90uvkiQqI3izIF5GXgCDAet1NAlPsKTV63wNc4wuIag==}
+    engines: {node: '>=0.6.10'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
   aria-hidden@1.2.4:
     resolution: {integrity: sha512-y+CcFFwelSXpLZk/7fMB2mUbGtX9lKycf1MWJ7CaTIERyitVlyQx6C+sxcROU2BAJ24OiZyK+8wj2i8AlBoS3A==}
     engines: {node: '>=10'}
@@ -2883,6 +2891,13 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
+  etherpad-load-test@1.0.10:
+    resolution: {integrity: sha512-BZxq225bBvh5Kk5TYsUuctVqtCFRRZ6DCrpM2jIZL27kemS2ZaXqiAmjO9Y9+hsdptDIcUvZaApvwW2pkUCh2A==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    peerDependencies:
+      ep_etherpad-lite: '>=1.8.6'
+
   express-rate-limit@7.4.1:
     resolution: {integrity: sha512-KS3efpnpIDVIXopMc65EMbWbUht7qvTCdtCR2dD/IZmi9MIkopYESwyRqLgv8Pfu589+KqDqOdzJWW7AHoACeg==}
     engines: {node: '>= 16'}
@@ -3616,6 +3631,11 @@ packages:
   measured-core@2.0.0:
     resolution: {integrity: sha512-SIzGtX1WGDvR59FqcJaGEAqDueBvLBh6W4T/gQaHr5ufcqvQkUHGcfQhlmq77mkeF5Mo+UpD+8hm69CwUVibGw==}
     engines: {node: '>= 5.12'}
+
+  measured@1.1.0:
+    resolution: {integrity: sha512-iB0wcNuM/HLmk3xh/ZYg8oARuKfKT7UIFS9c7QhxZoISlFShR4cz4hHx1AkBs5f2HmLjMVOEPofsXCkuKKzKRg==}
+    engines: {node: '>= 0.10'}
+    deprecated: This package has been renamed to measured-core, all versions of measured have been re-released under measured-core, please update your package and consider updating to the newest version. See https://github.com/yaorg/node-measured for latest updates.
 
   media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
@@ -6655,6 +6675,8 @@ snapshots:
 
   argparse@2.0.1: {}
 
+  argv@0.0.3: {}
+
   aria-hidden@1.2.4:
     dependencies:
       tslib: 2.6.3
@@ -7363,7 +7385,7 @@ snapshots:
       debug: 4.3.7
       enhanced-resolve: 5.17.0
       eslint: 9.12.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-plugin-import@2.29.1)(eslint@9.12.0))(eslint@9.12.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@9.12.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.1)(eslint@9.12.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
@@ -7375,7 +7397,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-plugin-import@2.29.1)(eslint@9.12.0))(eslint@9.12.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@9.12.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -7414,7 +7436,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.12.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-plugin-import@2.29.1)(eslint@9.12.0))(eslint@9.12.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.17.0(eslint@9.12.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@9.12.0)
       hasown: 2.0.2
       is-core-module: 2.15.0
       is-glob: 4.0.3
@@ -7564,6 +7586,18 @@ snapshots:
       async: 3.2.6
       socket.io-client: 4.8.0
       superagent: 8.1.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  etherpad-load-test@1.0.10(ep_etherpad-lite@src):
+    dependencies:
+      argv: 0.0.3
+      async: 3.2.6
+      ep_etherpad-lite: link:src
+      etherpad-cli-client: 3.0.2
+      measured: 1.1.0
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -8473,6 +8507,10 @@ snapshots:
     dependencies:
       binary-search: 1.3.6
       optional-js: 2.3.0
+
+  measured@1.1.0:
+    dependencies:
+      inherits: 2.0.4
 
   media-typer@0.3.0: {}
 
