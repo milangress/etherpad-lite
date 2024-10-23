@@ -41,7 +41,6 @@ services:
       - DISABLE_IP_LOGGING=${DISABLE_IP_LOGGING:-false}
       - SOFFICE=${SOFFICE:-null}
       - TRUST_PROXY=true
-      - SERVICE_FQDN_APP_9001
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9001"]
