@@ -1,31 +1,5 @@
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-Regular.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-Italic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
+@import url('global.css');
+
 html {
   font-size: 15px;
 }

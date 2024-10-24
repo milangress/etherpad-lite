@@ -1,58 +1,19 @@
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-Regular.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-Italic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "inter";
-  src: url("src/fonts/inter/Inter-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
+@import url('global.css');
+
 html {
-  font-size: 15px;
+  font-size: var(--font-size-base);
 }
+
 body {
-  color: #2c2c2c;
-  font-family: "inter", "Open Sans", Helvetica, Arial, sans-serif;
+  color: var(--color-text);
+  font-family: var(--font-family-main);
 }
+
 ::selection {
-  color: #fff;
-  background: #1d30fa;
+  color: var(--color-white);
+  background: var(--color-primary);
 }
-:root {
-  --editor-horizontal-padding: 55px;
-  --editor-vertical-padding: 40px;
-}
-@media (max-width: 1000px) {
-  :root {
-    --editor-horizontal-padding: 15px;
-    --editor-vertical-padding: 15px;
-  }
-}
-@media (max-width: 600px) {
-  :root {
-    --editor-horizontal-padding: 15px;
-    --editor-vertical-padding: 15px;
-  }
-}
+
 #button,
 body,
 form {
@@ -63,10 +24,10 @@ body {
   background-image: url(images/index.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "inter", "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-mono);
   font-size: 16px;
   line-height: 1.42857143;
-  color: #2c2c2c;
+  color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,12 +41,12 @@ body {
   box-shadow: none;
 }
 input {
-  background-color: #f7f7f7 !important;
-  border: 1px solid #e1e4e8;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  -ms-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  color: #2c2c2c;
+  background-color: var(--color-input-bg) !important;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -ms-box-shadow: var(--box-shadow);
+  color: var(--color-text);
 }
 #inner {
   background: transparent;
@@ -93,18 +54,18 @@ input {
   width: 300px;
   max-width: 300px;
   text-align: center;
-  color: #2c2c2c;
+  color: var(--color-text);
   padding: 30px;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   background-color: #fff;
-  border: 1px solid #e1e4e8;
-  box-shadow: 0 1px 7px 2px rgba(0, 0, 0, 0.08);
-  -webkit-box-shadow: 0 1px 7px 2px rgba(0, 0, 0, 0.08);
-  -ms-box-shadow: 0 1px 7px 2px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -ms-box-shadow: var(--box-shadow);
 }
 #label {
   text-shadow: none;
-  color: #2c2c2c;
+  color: var(--color-text);
   font-weight: normal;
   text-align: center;
 }
@@ -115,29 +76,29 @@ input {
   text-shadow: none;
   font-size: 23px;
   line-height: 1.8;
-  color: #fff;
-  background: #1d30fa;
-  border-radius: 6px;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--border-radius);
   box-shadow: none !important;
   height: 53px;
   border: none;
   display: block;
-  font-family: "inter", "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-mono);
 }
 button[type="submit"] {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   left: 255px;
-  color: #fff;
-  background: #1d30fa;
+  color: var(--color-white);
+  background: var(--color-primary);
   border: none;
   top: 0;
   opacity: 1;
   transition: 0.4s box-shadow;
   transition: 0.4s background;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  -ms-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+  box-shadow: var(--box-shadow);
+  -webkit-box-shadow: var(--box-shadow);
+  -ms-box-shadow: var(--box-shadow);
 }
 #button:hover,
 button[type="submit"]:hover,
@@ -146,8 +107,8 @@ button[type="submit"]:active,
 #button:focus,
 button[type="submit"]:focus {
   cursor: pointer;
-  background: #1a2ace;
-  color: #fff;
+  background: var(--color-primary-hover);
+  color: var(--color-white);
 }
 #padname {
   height: 38px;
