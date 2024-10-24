@@ -630,6 +630,7 @@
    * Toolbar buttons configuration.
    *
    * Uncomment to customize.
+   * ["clearauthorship"]
    */
 
   /*
@@ -637,8 +638,7 @@
     "left": [
       ["bold", "italic", "underline", "strikethrough"],
       ["orderedlist", "unorderedlist", "indent", "outdent"],
-      ["undo", "redo"],
-      ["clearauthorship"]
+      ["undo", "redo"]
     ],
     "right": [
       ["importexport", "timeslider", "savedrevision"],
