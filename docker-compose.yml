@@ -43,6 +43,8 @@ services:
       - TRUST_PROXY=true
       - LOAD_TEST=false
       - SKIN_NAME=teapad
+      - PAD_OPTIONS_SHOW_LINE_NUMBERS=false
+      - PAD_OPTIONS_SHOW_CHAT=false
     restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9001"]
