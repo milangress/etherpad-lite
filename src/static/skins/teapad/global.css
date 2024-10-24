@@ -132,3 +132,10 @@
     --editor-vertical-padding: 15px;
   }
 }
+
+
+u {
+    text-decoration: underline 0.1em;
+    text-decoration-skip: all;
+    text-underline-offset: 10%;
+  }
