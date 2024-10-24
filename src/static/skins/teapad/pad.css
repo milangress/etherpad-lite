@@ -814,9 +814,10 @@ select,
 textarea,
 .nice-select {
   border-radius: 4px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+  box-shadow: none;
+  /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  -ms-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+  -ms-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.11); */
   border: 1px solid var(--color-border);
   outline: 0;
 }
@@ -836,11 +837,15 @@ textarea::placeholder {
 
 select,
 .nice-select {
-  background-color: var(--color-input-bg);
-  border: 1px solid var(--color-border);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
   padding: 4px 10px;
   padding-right: 25px;
   line-height: inherit;
+}
+
+.nice-select:hover {
+  border-color: var(--color-primary-hover);
 }
 
 .nice-select .list {
@@ -850,8 +855,14 @@ select,
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
+  color: var(--color-background);
   background-color: var(--color-primary);
 }
+
+.nice-select .list:hover .selected:not(:hover) {
+    color: var(--color-primary);
+	background-color: transparent !important;
+  }
 
 .nice-select .option {
   padding: 0 15px;
