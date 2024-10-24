@@ -1,5 +1,5 @@
 @import url("global.css");
-@import url(src/fonts/microns/microns.css);
+/* @import url(src/fonts/microns/microns.css); */
 
 html {
   font-size: var(--font-size-base);
