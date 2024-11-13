@@ -7,10 +7,21 @@ services:
       target: production
       args:
         ETHERPAD_PLUGINS: >-
-          ep_image_upload
-          ep_embedded_hyperlinks2
-          ep_headings2
           ep_align
+          ep_bookmark
+          ep_clear_formatting
+          ep_headings2
+          ep_image_upload
+          ep_markdown
+          ep_offline_edit
+          ep_performance_test_hooks
+          ep_print
+          ep_prometheus
+          ep_short_edition_countable
+          ep_spellcheck
+          ep_table_of_contents
+          ep_workspaces
+          ep_rehearsal-compiler
     tty: true
     stdin_open: true
     volumes:
