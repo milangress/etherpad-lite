@@ -6,6 +6,7 @@ services:
       dockerfile: ./Dockerfile
       target: production
       args:
+        ETHERPAD_LOCAL_PLUGINS: ep_rehearsal-compiler
         ETHERPAD_PLUGINS: >-
           ep_align
           ep_bookmark
