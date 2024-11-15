@@ -22,6 +22,7 @@ services:
           ep_spellcheck
           ep_table_of_contents
           ep_workspaces
+          ep_rehearsal_compiler
     tty: true
     stdin_open: true
     volumes:
