@@ -23,6 +23,7 @@ services:
           ep_table_of_contents
           ep_workspaces
           ep_rehearsal_compiler
+          ep_awwtysm
     tty: true
     stdin_open: true
     volumes:
