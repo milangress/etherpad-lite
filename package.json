@@ -32,7 +32,8 @@
     "build:etherpad": "pnpm --filter admin run build-copy && pnpm --filter ui run build-copy",
     "build:ui": "pnpm --filter ui run build-copy && pnpm --filter admin run build-copy",
     "makeDocs": "pnpm --filter bin run makeDocs",
-    "loadtest": "etherpad-loadtest http://pad.milan.place/p/test -l 200 -a 150"
+    "loadtest": "etherpad-loadtest http://pad.milan.place/p/test -l 200 -a 150",
+    "dev:plugin": "pnpm run plugins i --path /Users/milan/gh/ep_awwtysm && pnpm run dev"
   },
   "dependencies": {
     "ep_etherpad-lite": "workspace:./src"

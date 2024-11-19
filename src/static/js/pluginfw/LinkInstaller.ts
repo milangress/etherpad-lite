@@ -39,7 +39,7 @@ export class LinkInstaller {
     }
 
     public async installFromPath(path: string) {
-        const installedPlugin = await this.livePluginManager.installFromPath(path)
+        const installedPlugin = await this.livePluginManager.installFromPath(path, {force: true})
         this.linkDependency(installedPlugin.name)
         await this.checkLinkedDependencies(installedPlugin)
     }
